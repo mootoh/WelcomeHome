@@ -2,13 +2,13 @@
 //  WelcomeHereAppDelegate.m
 //  WelcomeHere
 //
-//  Created by 征大 高山 on 7/23/11.
+//  Created by Motohiro Takayama on 7/23/11.
 //  Copyright 2011 deadbeaf.org. All rights reserved.
 //
 
 #import "WelcomeHereAppDelegate.h"
-
 #import "WelcomeHereViewController.h"
+#import "Foursquare2.h"
 
 @implementation WelcomeHereAppDelegate
 
@@ -22,7 +22,17 @@
     self.viewController = [[WelcomeHereViewController alloc] initWithNibName:@"WelcomeHereViewController" bundle:nil]; 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+
+    if ([self needsLogin]) {
+        [self.viewController showVenuSelection];
+    }
+    
     return YES;
+}
+
+- (BOOL) needsLogin
+{
+    return [Foursquare2 isNeedToAuthorize];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -62,6 +72,12 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+- (void) setVenue:(NSDictionary *)venue
+{
+    // save the venue into the persistent storage
+    [self.viewController setVenue:venue];
 }
 
 @end

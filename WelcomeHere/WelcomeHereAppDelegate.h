@@ -2,7 +2,7 @@
 //  WelcomeHereAppDelegate.h
 //  WelcomeHere
 //
-//  Created by 征大 高山 on 7/23/11.
+//  Created by Motohiro Takayama on 7/23/11.
 //  Copyright 2011 deadbeaf.org. All rights reserved.
 //
 
@@ -12,8 +12,10 @@
 
 @interface WelcomeHereAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (retain, nonatomic) UIWindow *window;
+@property (retain, nonatomic) WelcomeHereViewController *viewController;
 
-@property (strong, nonatomic) WelcomeHereViewController *viewController;
+- (BOOL) needsLogin;
+- (void) setVenue:(NSDictionary *)venue;
 
 @end

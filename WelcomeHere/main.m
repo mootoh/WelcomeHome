@@ -2,7 +2,7 @@
 //  main.m
 //  WelcomeHere
 //
-//  Created by 征大 高山 on 7/23/11.
+//  Created by Motohiro Takayama on 7/23/11.
 //  Copyright 2011 deadbeaf.org. All rights reserved.
 //
 
@@ -12,7 +12,7 @@
 
 int main(int argc, char *argv[])
 {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([WelcomeHereAppDelegate class]));
-    }
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    return UIApplicationMain(argc, argv, nil, NSStringFromClass([WelcomeHereAppDelegate class]));
+    [pool release];
 }
