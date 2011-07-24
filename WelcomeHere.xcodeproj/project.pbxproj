@@ -1,0 +1,283 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		926CD0FE13DBEE050015C475 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926CD0FD13DBEE050015C475 /* UIKit.framework */; };
+		926CD10013DBEE050015C475 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926CD0FF13DBEE050015C475 /* Foundation.framework */; };
+		926CD10213DBEE050015C475 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 926CD10113DBEE050015C475 /* CoreGraphics.framework */; };
+		926CD10813DBEE050015C475 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 926CD10613DBEE050015C475 /* InfoPlist.strings */; };
+		926CD10A13DBEE050015C475 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CD10913DBEE050015C475 /* main.m */; };
+		926CD10E13DBEE050015C475 /* WelcomeHereAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CD10D13DBEE050015C475 /* WelcomeHereAppDelegate.m */; };
+		926CD11113DBEE050015C475 /* WelcomeHereViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 926CD11013DBEE050015C475 /* WelcomeHereViewController.m */; };
+		926CD11413DBEE050015C475 /* WelcomeHereViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926CD11213DBEE050015C475 /* WelcomeHereViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		926CD0F913DBEE050015C475 /* WelcomeHere.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WelcomeHere.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		926CD0FD13DBEE050015C475 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		926CD0FF13DBEE050015C475 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		926CD10113DBEE050015C475 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		926CD10513DBEE050015C475 /* WelcomeHere-Info.plist */ = {isa = PBXFileReference; path = "WelcomeHere-Info.plist"; sourceTree = "<group>"; };
+		926CD10713DBEE050015C475 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		926CD10913DBEE050015C475 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		926CD10B13DBEE050015C475 /* WelcomeHere-Prefix.pch */ = {isa = PBXFileReference; path = "WelcomeHere-Prefix.pch"; sourceTree = "<group>"; };
+		926CD10C13DBEE050015C475 /* WelcomeHereAppDelegate.h */ = {isa = PBXFileReference; path = WelcomeHereAppDelegate.h; sourceTree = "<group>"; };
+		926CD10D13DBEE050015C475 /* WelcomeHereAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeHereAppDelegate.m; sourceTree = "<group>"; };
+		926CD10F13DBEE050015C475 /* WelcomeHereViewController.h */ = {isa = PBXFileReference; path = WelcomeHereViewController.h; sourceTree = "<group>"; };
+		926CD11013DBEE050015C475 /* WelcomeHereViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WelcomeHereViewController.m; sourceTree = "<group>"; };
+		926CD11313DBEE050015C475 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WelcomeHereViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		926CD0F613DBEE050015C475 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926CD0FE13DBEE050015C475 /* UIKit.framework in Frameworks */,
+				926CD10013DBEE050015C475 /* Foundation.framework in Frameworks */,
+				926CD10213DBEE050015C475 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		926CD0EE13DBEE040015C475 = {
+			isa = PBXGroup;
+			children = (
+				926CD10313DBEE050015C475 /* WelcomeHere */,
+				926CD0FC13DBEE050015C475 /* Frameworks */,
+				926CD0FA13DBEE050015C475 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		926CD0FA13DBEE050015C475 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				926CD0F913DBEE050015C475 /* WelcomeHere.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		926CD0FC13DBEE050015C475 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				926CD0FD13DBEE050015C475 /* UIKit.framework */,
+				926CD0FF13DBEE050015C475 /* Foundation.framework */,
+				926CD10113DBEE050015C475 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		926CD10313DBEE050015C475 /* WelcomeHere */ = {
+			isa = PBXGroup;
+			children = (
+				926CD10C13DBEE050015C475 /* WelcomeHereAppDelegate.h */,
+				926CD10D13DBEE050015C475 /* WelcomeHereAppDelegate.m */,
+				926CD10F13DBEE050015C475 /* WelcomeHereViewController.h */,
+				926CD11013DBEE050015C475 /* WelcomeHereViewController.m */,
+				926CD11213DBEE050015C475 /* WelcomeHereViewController.xib */,
+				926CD10413DBEE050015C475 /* Supporting Files */,
+			);
+			path = WelcomeHere;
+			sourceTree = "<group>";
+		};
+		926CD10413DBEE050015C475 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				926CD10513DBEE050015C475 /* WelcomeHere-Info.plist */,
+				926CD10613DBEE050015C475 /* InfoPlist.strings */,
+				926CD10913DBEE050015C475 /* main.m */,
+				926CD10B13DBEE050015C475 /* WelcomeHere-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		926CD0F813DBEE050015C475 /* WelcomeHere */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 926CD11713DBEE050015C475 /* Build configuration list for PBXNativeTarget "WelcomeHere" */;
+			buildPhases = (
+				926CD0F513DBEE050015C475 /* Sources */,
+				926CD0F613DBEE050015C475 /* Frameworks */,
+				926CD0F713DBEE050015C475 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WelcomeHere;
+			productName = WelcomeHere;
+			productReference = 926CD0F913DBEE050015C475 /* WelcomeHere.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		926CD0F013DBEE040015C475 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = deadbeaf.org;
+			};
+			buildConfigurationList = 926CD0F313DBEE040015C475 /* Build configuration list for PBXProject "WelcomeHere" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 926CD0EE13DBEE040015C475;
+			productRefGroup = 926CD0FA13DBEE050015C475 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				926CD0F813DBEE050015C475 /* WelcomeHere */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		926CD0F713DBEE050015C475 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926CD10813DBEE050015C475 /* InfoPlist.strings in Resources */,
+				926CD11413DBEE050015C475 /* WelcomeHereViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		926CD0F513DBEE050015C475 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				926CD10A13DBEE050015C475 /* main.m in Sources */,
+				926CD10E13DBEE050015C475 /* WelcomeHereAppDelegate.m in Sources */,
+				926CD11113DBEE050015C475 /* WelcomeHereViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		926CD10613DBEE050015C475 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				926CD10713DBEE050015C475 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		926CD11213DBEE050015C475 /* WelcomeHereViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				926CD11313DBEE050015C475 /* en */,
+			);
+			name = WelcomeHereViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		926CD11513DBEE050015C475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		926CD11613DBEE050015C475 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		926CD11813DBEE050015C475 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WelcomeHere/WelcomeHere-Prefix.pch";
+				INFOPLIST_FILE = "WelcomeHere/WelcomeHere-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		926CD11913DBEE050015C475 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WelcomeHere/WelcomeHere-Prefix.pch";
+				INFOPLIST_FILE = "WelcomeHere/WelcomeHere-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		926CD0F313DBEE040015C475 /* Build configuration list for PBXProject "WelcomeHere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				926CD11513DBEE050015C475 /* Debug */,
+				926CD11613DBEE050015C475 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		926CD11713DBEE050015C475 /* Build configuration list for PBXNativeTarget "WelcomeHere" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				926CD11813DBEE050015C475 /* Debug */,
+				926CD11913DBEE050015C475 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 926CD0F013DBEE040015C475 /* Project object */;
+}
