@@ -68,20 +68,43 @@
     return YES;
 }
 
-- (void) setVenue:(NSDictionary *)venue_
+- (void) showNewUser:(NSDictionary *)user
 {
-    venue = [venue_ retain];
-    NSString *venueID = [venue objectForKey:@"id"];
+    NSLog(@"new user: %@", [user objectForKey:@"firstName"]);
+}
 
-    self.title = [venue objectForKey:@"name"];
+- (void) checkNewPeople:(NSArray *)newPeople
+{
+    for (NSDictionary *userInfo in newPeople) {
+        NSDictionary *user = [userInfo objectForKey:@"user"];
+        // show the new user dramatically
+        [self showNewUser:user];
+    }
+}
+
+- (void) updateVenuPeople
+{
+    NSString *venueID = [venue objectForKey:@"id"];
 
     [Foursquare2 getVenueHereNow:venueID limit:nil offset:nil afterTimestamp:nil callback:^(BOOL success, id result) {
         if (success) {
             NSDictionary *response = (NSDictionary *)result;
-            self.peopleNow = [[[response objectForKey:@"response"] objectForKey:@"hereNow"] objectForKey:@"items"];
+            NSArray *people  = [[[response objectForKey:@"response"] objectForKey:@"hereNow"] objectForKey:@"items"];
+            [self checkNewPeople:people];
+            self.peopleNow = people;
+
             [peopleNowTableView reloadData];
         }
     }];
+
+}
+
+- (void) setVenue:(NSDictionary *)venue_
+{
+    venue = [venue_ retain];
+    self.title = [venue objectForKey:@"name"];
+
+    [self updateVenuPeople];
 }
 
 - (IBAction) showVenuSelection

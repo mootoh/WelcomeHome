@@ -11,6 +11,10 @@
 @class WelcomeHereViewController;
 
 @interface WelcomeHereAppDelegate : UIResponder <UIApplicationDelegate>
+{
+    BOOL isPolling_;
+    NSTimer *timer_;
+}
 
 @property (retain, nonatomic) UIWindow *window;
 @property (retain, nonatomic) WelcomeHereViewController *viewController;

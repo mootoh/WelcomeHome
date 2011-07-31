@@ -23,5 +23,6 @@
 @property (nonatomic, retain) NSArray *peoplePast;
 
 - (IBAction) showVenuSelection;
+- (void) updateVenuPeople;
 
 @end

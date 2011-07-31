@@ -71,6 +71,12 @@
         locationManager.delegate = self;
         [locationManager startUpdatingLocation];
     }
+
+#ifdef TARGET_IPHONE_SIMULATOR
+    // 37.799561,-122.408928
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:33.799561 longitude:-122.408928];
+    [self searchVenue:location];
+#endif
 }
 
 -(void) authorizeWithViewController:(UIViewController*)controller callback:(Foursquare2Callback)callback{
@@ -95,13 +101,10 @@
 	}];
 }
 
-- (void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+- (void) searchVenue:(CLLocation *)location
 {
-    [manager stopUpdatingLocation];
-    [manager release];
-    
-    NSString *latitude  = [NSString stringWithFormat:@"%f", newLocation.coordinate.latitude];
-    NSString *longitude = [NSString stringWithFormat:@"%f", newLocation.coordinate.longitude];
+    NSString *latitude  = [NSString stringWithFormat:@"%f", location.coordinate.latitude];
+    NSString *longitude = [NSString stringWithFormat:@"%f", location.coordinate.longitude];
     NSLog(@"lat = %@, long = %@", latitude, longitude);
 
     [Foursquare2 searchVenuesNearByLatitude:latitude longitude:longitude accuracyLL:nil altitude:nil accuracyAlt:nil query:nil limit:nil intent:nil callback:^(BOOL success, id result){
@@ -117,6 +120,15 @@
         }
     }];
 }
+
+- (void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    [manager stopUpdatingLocation];
+    [manager release];
+
+    [self searchVenue:newLocation];
+}
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -161,7 +173,6 @@
 
 - (void)tableView:(UITableView *)tv didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
     WelcomeHereAppDelegate *appDelegate = (WelcomeHereAppDelegate *)[UIApplication sharedApplication].delegate;
     NSDictionary *venue = [venues objectAtIndex:indexPath.row];
     [appDelegate setVenue:venue];

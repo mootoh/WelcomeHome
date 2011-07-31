@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    isPolling_ = NO;
+    timer_ = nil;
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[WelcomeHereViewController alloc] initWithNibName:@"WelcomeHereViewController" bundle:nil]; 
@@ -74,10 +77,39 @@
      */
 }
 
+- (BOOL) isPolling
+{
+    return isPolling_;
+}
+
+- (void) startPolling
+{
+    timer_ = [[NSTimer timerWithTimeInterval:60 target:self.viewController selector:@selector(updateVenuPeople) userInfo:nil repeats:YES] retain];
+    [[NSRunLoop mainRunLoop] addTimer:timer_ forMode:NSDefaultRunLoopMode];
+    isPolling_ = YES;
+}
+
+- (void) stopPolling
+{
+    if (timer_) {
+        [timer_ invalidate];
+        [timer_ release];
+        timer_ = nil;
+    }
+
+    isPolling_ = NO;
+}
+
 - (void) setVenue:(NSDictionary *)venue
 {
+    if ([self isPolling])
+        [self stopPolling];
+
     // save the venue into the persistent storage
     [self.viewController setVenue:venue];
+
+    // start polling for new visitors
+    [self startPolling];
 }
 
 @end

@@ -21,4 +21,6 @@
 -(void)authorizeWithViewController:(UIViewController*)controller callback:(Foursquare2Callback)callback;
 -(void)setCode:(NSString*)code;
 
+- (void) searchVenue:(CLLocation *)location;
+
 @end
